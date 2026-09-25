@@ -20,3 +20,6 @@ class T2509():
 
     def task4(num):
         print(num // 100 + num % 100 // 10 + num % 10)
+
+    def task5(num):
+        print(f"{"Положительное" if num > 0 else "Ноль"}" if num >= 0 else "Отрицательное")
