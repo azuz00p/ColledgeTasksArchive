@@ -1,12 +1,7 @@
-import tasks
+import hub
 
 
-welcom = ["__        __  _____   _        ____    ___    __  __   _____ ",
-          "\\ \\      / / | ____| | |      / ___|  / _ \\  |  \\/  | | ____|",
-          " \\ \\ /\\ / /  |  _|   | |     | |     | | | | | |\\/| | |  _|",
-          "  \\ V  V /   | |___  | |___  | |___  | |_| | | |  | | | |___ ",
-          "   \\_/\\_/    |_____| |_____|  \\____|  \\___/  |_|  |_| |_____|"]
-print("______________________________________________________", *welcom, sep="\n")
+hub.Hub.welcom()
 while True:
     print("______________________________________________________")
     day = input("Введите дату урока(-ов)(дд.мм), 0 для выключения: ")
@@ -15,43 +10,10 @@ while True:
         break
 
     if day == "24.09":
-        while True:
-            print("______________________________________________________", f"Выбрана дата: {day}", sep="\n")
-            task = input("Введите номер задания(1-3, 0 для возвращения): ")
-            if task == "0":
-                print("Возвращение к выбору даты...")
-                break
-            elif task == "1":
-                tasks.T2409.task1(input())
-            elif task == "2":
-                tasks.T2409.task2(int(input()), int(input()), int(input()), int(input()))
-            elif task == "3":
-                tasks.T2409.task3()
-            else:
-                print("Некорректный ввод")
+        hub.Hub.H2409(day)
 
     elif day == "25.09":
-        while True:
-            print("______________________________________________________", f"Выбрана дата: {day}", sep="\n")
-            task = input("Введите номер задания(1-5, 0 для возвращения): ")
-            if task == "0":
-                print("Возвращение к выбору даты...")
-                break
-            elif task == "1":
-                tasks.T2509.task1(int(input()), int(input()))
-            elif task == "2":
-                if input("Хотите вставить свои числа? (Y/N) ").upper() == "Y":
-                    tasks.T2509.task2(int(input()), int(input()))
-                else:
-                    tasks.T2509.task2()
-            elif task == "3":
-                tasks.T2509.task3(int(input("Введите стоимость(рубли): ")), int(input("Введите стоимость(копейки): ")), int(input("Введите количество: ")))
-            elif task == "4":
-                tasks.T2509.task4(int(input("Введите трёхзначное число: ")))
-            elif task == "5":
-                tasks.T2509.task5(int(input("Введите число: ")))
-            else:
-                print("Некорректный ввод")
+        hub.Hub.H2509
 
     else:
         print("Некорректный ввод")
