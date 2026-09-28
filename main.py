@@ -13,7 +13,7 @@ while True:
         hub.Hub.H2409(day)
 
     elif day == "25.09":
-        hub.Hub.H2509
+        hub.Hub.H2509(day)
 
     else:
         print("Некорректный ввод")
