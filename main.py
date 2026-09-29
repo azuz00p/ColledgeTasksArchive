@@ -1,6 +1,12 @@
 import hub
 
 
+# Шаблон для расширения
+"""
+    elif day == "00.00":
+        hub.Hub.H0000(day)
+"""
+
 hub.Hub.welcom()
 while True:
     print("______________________________________________________")
@@ -14,6 +20,6 @@ while True:
 
     elif day == "25.09":
         hub.Hub.H2509(day)
-
+    
     else:
         print("Некорректный ввод")
