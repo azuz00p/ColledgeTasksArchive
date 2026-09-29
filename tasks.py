@@ -36,3 +36,10 @@ class T2509():
 
     def task5(num):
         print(f"{"Положительное" if num > 0 else "Ноль"}" if num >= 0 else "Отрицательное")
+
+class T2909():
+    def task1(num):
+        print(f"{"Положительное" if num > 0 else "Ноль"}" if num >= 0 else "Отрицательное", "чётное" if num % 2 == 0 else "нечётное", sep=", ")
+
+    def task2(cost, card):
+        print(f"К оплате: {cost * (float(f"{0.9 if cost >= 10000 else 0.95}") if cost >= 5000 else 0) - (0.03 if card.lower() == "да" else 0)}")
