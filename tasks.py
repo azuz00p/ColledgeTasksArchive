@@ -1,3 +1,16 @@
+# Шаблон для расширения
+"""
+class T0000():
+    def task1():
+        print()
+
+    def task2():
+        print()
+
+    def task3():
+        print()
+"""
+
 class T2409():
     def task1(name):
         print(f"Привет, {name}! Я - нейросеть ARIA.", f"Инициализация диалога с пользователем {name} завершена.", sep="\n")
