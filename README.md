@@ -5,4 +5,4 @@
 
 ## EN Description
 
-Just an archive of tasks form the lessons, what else do I say?
+Just an archive of tasks form lessons, what else do I say?
