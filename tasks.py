@@ -43,3 +43,7 @@ class T2909():
 
     def task2(cost, card):
         print(f"К оплате: {cost * (float(f"{0.9 if cost >= 10000 else 0.95}") if cost >= 5000 else 0) - (0.03 if card.lower() == "да" else 0)}")
+
+class T0210():
+    def task1(weather, temp):
+        print("Остаёмся дома" if weather.lower() == "дождь" else f"{"Можно идти на пляж" if weather.lower() == "солнце" and temp > 25 else f"{"Идём гулять в парк" if weather.lower() == "солнце" and temp >= 15 else "Читаем книгу дома"}"}")
