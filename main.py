@@ -23,6 +23,9 @@ while True:
 
     elif day == "29.09":
         hub.Hub.H2909(day)
-    
+
+    elif day == "02.10":
+        hub.Hub.H0210(day)
+
     else:
         print("Некорректный ввод")
