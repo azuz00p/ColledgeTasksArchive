@@ -81,3 +81,15 @@ class Hub():
                     tasks.T2909.task2(int(input()), input())
                 else:
                     print("Некорректный ввод")
+
+    def H0210(day):
+            while True:
+                print("______________________________________________________", f"Выбрана дата: {day}", sep="\n")
+                task = input("Введите номер задания(1, 0 для возвращения): ")
+                if task == "0":
+                    print("Возвращение к выбору даты...")
+                    break
+                elif task == "1":
+                    tasks.T0210.task1(input(), int(input()))
+                else:
+                    print("Некорректный ввод")
