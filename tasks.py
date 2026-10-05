@@ -47,3 +47,10 @@ class T2909():
 class T0210():
     def task1(weather, temp):
         print("Остаёмся дома" if weather.lower() == "дождь" else f"{"Можно идти на пляж" if weather.lower() == "солнце" and temp > 25 else f"{"Идём гулять в парк" if weather.lower() == "солнце" and temp >= 15 else "Читаем книгу дома"}"}")
+
+class T0510():
+    def task1(name="user", subscription=True, code=False, VIP=True):
+        print("Просмотр разрешён" if name == "user" and (subscription == True or code == True) and VIP else "Нужно оплатить")
+
+    def task2(steps, workout_length, eco_mode):
+        print("Поздравить" if (steps >= 10000 or workout_length > 45) and not eco_mode else "Не включать анимацию")
