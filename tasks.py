@@ -54,3 +54,9 @@ class T0510():
 
     def task2(steps, workout_length, eco_mode):
         print("Поздравить" if (steps >= 10000 or workout_length > 45) and not eco_mode else "Не включать анимацию")
+
+    def task3(n):
+        print("*" * n for i in range(n))
+
+    def task4(n):
+        print(*[f'{f"{i + 1}, " if i + 1 < n else i}' if i % 2 != 0 else "" for i in range(n)][:-2], sep="", end=f"{n if n % 2 == 0 else n - 1}\n")
