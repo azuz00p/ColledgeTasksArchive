@@ -97,7 +97,7 @@ class Hub():
     def H0510(day):
             while True:
                 print("______________________________________________________", f"Выбрана дата: {day}", sep="\n")
-                task = input("Введите номер задания(1-2, 0 для возвращения): ")
+                task = input("Введите номер задания(1-4, 0 для возвращения): ")
                 if task == "0":
                     print("Возвращение к выбору даты...")
                     break
@@ -108,5 +108,9 @@ class Hub():
                         tasks.T0510.task1()
                 elif task == "2":
                     tasks.T0510.task2(int(input()), int(input()), True if input().lower() in ["true", "yes", "да"] else False)
+                elif task == "3":
+                    tasks.T0510.task3(int(input()))
+                elif task == "4":
+                    tasks.T0510.task4(int(input()))
                 else:
                     print("Некорректный ввод")
