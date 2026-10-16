@@ -9,7 +9,7 @@ class T0000():
 
     def task3():
         print()
-"""
+""" 
 
 class T2409():
     def task1(name):
@@ -66,3 +66,30 @@ class T1210():
         while n >= 0:
             print(n)
             n -= 1
+
+class T1610():
+    def task1(n):
+        while True:
+            if n == 0:
+                break
+            print(n)
+            n = int(input())
+
+    def task2():
+        while True:
+            n = input("Введите положительное число: ")
+            try:
+                if int(n) > 0:
+                    break      
+            except:
+                print("Ошибка: Введено не число")
+
+    def task3(n):
+        list = []
+        for i in range(n, 1, -5):
+            if i % 2 == 0:
+                continue
+            list.append(i)
+            if i < 10:
+                print(f"Меньше 10\nВыбранные числа: {list[0]}", *list[1:], sep="; ")
+                break
