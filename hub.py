@@ -126,3 +126,19 @@ class Hub():
                     tasks.T1210.task1(int(input()) if input("Хотите ввести своё число? (Y/N) ").lower() == "y" else 10)
                 else:
                     print("Некорректный ввод")
+
+    def H1610(day):
+            while True:
+                print("______________________________________________________", f"Выбрана дата: {day}", sep="\n")
+                task = input("Введите номер задания(1-3, 0 для возвращения): ")
+                if task == "0":
+                    print("Возвращение к выбору даты...")
+                    break
+                elif task == "1":
+                    tasks.T1610.task1(int(input()))
+                elif task == "2":
+                    tasks.T1610.task2()
+                elif task == "3":
+                    tasks.T1610.task3(int(input()) if input("Хотите ввести своё число? (Y/N) ").lower() == "y" else 50)
+                else:
+                    print("Некорректный ввод")
