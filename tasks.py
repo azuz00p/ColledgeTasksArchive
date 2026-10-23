@@ -93,3 +93,21 @@ class T1610():
             if i < 10:
                 print(f"Меньше 10\nВыбранные числа: {list[0]}", *list[1:], sep="; ")
                 break
+
+class T1910():
+    def task1(line, word):
+        print(line.find(word) if word in line else "Не найдено")
+
+    def task2(phrase):
+        print(phrase.replace(" ", "_"))
+
+    def task3(line, symbol):
+        print(f"Первое: {line.find(symbol)}, последнее: {line.rfind(symbol)}." if symbol in line else "Не найдено")
+
+class T2110():
+    def task1(n, line):
+        print(line.upper() if n == "1" else ("Принято" if line.lower() == "да" else "Отклонено") if n == "2" else line.capitalize() if n == "3" else line.swapcase() if n == "4" else line.strip() if n == "5" else line.lstrip() if n == "6" else line.rstrip() if n == "7" else "Некорректное число")
+
+class T2310():
+    def task1(n):
+        print([4] * n)
