@@ -1,13 +1,13 @@
-import hub
+from hub import Hub
 
 
 # Шаблон для расширения
 """
     elif day == "00.00":
-        hub.Hub.H0000(day)
+        Hub.H0000(day)
 """
 
-hub.Hub.welcom()
+Hub.welcom()
 while True:
     print("______________________________________________________")
     day = input("Введите дату урока(-ов)(дд.мм), 0 для выключения: ")
@@ -16,34 +16,55 @@ while True:
         break
 
     if day == "24.09":
-        hub.Hub.H2409(day)
+        Hub.H2409(day)
 
     elif day == "25.09":
-        hub.Hub.H2509(day)
+        Hub.H2509(day)
 
     elif day == "29.09":
-        hub.Hub.H2909(day)
+        Hub.H2909(day)
 
     elif day == "02.10":
-        hub.Hub.H0210(day)
+        Hub.H0210(day)
 
     elif day == "05.10":
-        hub.Hub.H0510(day)
+        Hub.H0510(day)
 
     elif day == "12.10":
-        hub.Hub.H1210(day)
+        Hub.H1210(day)
 
     elif day == "16.10":
-        hub.Hub.H1610(day)
+        Hub.H1610(day)
 
     elif day == "19.10":
-        hub.Hub.H1910(day)
+        Hub.H1910(day)
 
     elif day == "21.10":
-        hub.Hub.H2110(day)
+        Hub.H2110(day)
 
     elif day == "23.10":
-        hub.Hub.H2310(day)
+        Hub.H2310(day)
+
+    elif day == "27.10":
+        Hub.H2710(day)
+
+    elif day == "28.10":
+        Hub.H2810(day)
+
+    elif day == "30.10":
+        Hub.H3010(day)
+
+    elif day == "02.11":
+        Hub.H0211(day)
+
+    elif day == "06.11":
+        Hub.H0611(day)
+
+    elif day == "16.11":
+        Hub.H1611(day)
+
+    elif day == "17.11":
+        Hub.H1711(day)
 
     else:
         print("Некорректный ввод")
