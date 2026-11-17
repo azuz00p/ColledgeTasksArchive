@@ -1,3 +1,6 @@
+
+from functions import *
+
 # Шаблон для расширения
 """
 class T0000():
@@ -111,3 +114,149 @@ class T2110():
 class T2310():
     def task1(n):
         print([4] * n)
+
+class T2710():
+    def task1(s=" ", line="яблоко киви груша банан"):
+        print("В списке есть бананы" if "банан" in line.lower().split(s.lower()) else "В списке нет бананов")
+
+    def task2(s=" ", line="футболка книга мяч бутылка ключи телефон"):
+        print("В рюкзаке лежит телефон" if "телефон" in line.lower().split(s.lower()) else "Проверить, взяли ли мы телефон")
+
+    def task3(s=" ", line="-10 20 -21 30 1 -2 9 -5 13 32"):
+        has_anomaly = False
+        for temp in line.split(s.lower()):
+            if int(temp) < 10 or int(temp) > 35:
+                has_anomaly = True
+                break
+        print("Обнаружена аномалия" if has_anomaly else "Температура в норме")
+
+class T2810():
+    def task1(n, list=[]):
+        for i in range(n):
+            list.append(int(input()))
+        max_elem = list[0]
+        for num in list:
+            max_elem = max(max_elem, num)
+        print(max_elem)
+
+    def task2(n, list=[]):
+        for i in range(n):
+            list.append(int(input()))
+        min_elem = list[0]
+        for num in list:
+            min_elem = min(min_elem, num)
+        print(*list + "\n" + min_elem)
+
+class T3010():
+    def task1(n, list=[]):
+        for i in range(n):
+            list.append(int(input()))
+        print(*list + "\n" + max(list))
+
+class T0211():
+    def task1(s=" ", line="5 7 3 11 27 -36 40 -5 -3 8"):
+        print(max(line.split(s)), min(line.split(s)))
+
+class T0611():
+    def task1(s=" ", line="5 7 3 11 27 -36 40 -5 -3 8"):
+        line = line.split(s)
+        for i in range(len(line) - 1):
+            for j in range(len(line) - 1 - i):
+                line[j],line[j + 1] = line[j + 1] if line[j] > line[j + 1] else line[j], line[j] if line[j] > line[j + 1] else line[j + 1]
+        print(line)
+
+    def task2(s=" ", line="5 7 3 11 27 -36 40 -5 -3 8"):
+        line = line.split(s)
+        for i in range(len(line) - 1):
+            min_value, min_index = min(line[i:]), line.index(min(line[i:]), i)
+            line[i], line[min_index] = line[min_index], line[i]
+        print(line)
+
+    def task3(list=[]):
+        for i in range(10):
+            list.append(int(input()))
+        for i in range(len(list) - 1):
+            for j in range(len(list) - 1 - i):
+                list[j],list[j + 1] = list[j + 1] if list[j] > list[j + 1] else list[j], list[j] if list[j] > list[j + 1] else list[j + 1]
+        print(list)
+
+class T1611():
+    def task1(lst=[]):
+        while True:
+            n = input("""   === ЧИТАТЕЛЬСКИЙ ДНЕВНИК ===
+    1 - Добавить книгу
+    2 - Показать все книги
+    3 - Показать последние 5 прочитанных
+    4 - Заменить название по номеру
+    5 - Поиск по названию
+    6 - Статистика
+    7 - Удалить книгу
+    0 - Выход
+""")
+
+            if n == "1":
+                title = input().strip()
+                if title != "":
+                    lst.append(f"{len(lst) + 1}. {title}")
+                    print("Книга успешно добавлена")
+                else:
+                    print("Ошибка: пустая строка / строка из пробелов")
+
+            elif n == "2":
+                print(*lst, sep="\n")
+
+            elif n == "3":
+                if len(lst) > 5:
+                    print(*lst[-5:], sep="\n")
+                else:
+                    print(*lst, sep="\n")
+
+            elif n == "4":
+                try:
+                    e, title = int(input("Выберите номер: ")), input().split()
+                    if title != "":
+                        lst[e - 1] = f"{e}. {title}"
+                    else:
+                        print("Ошибка: пустая строка / строка из пробелов")
+                except IndexError:
+                    print("Ошибка: недействительный номер книги")
+                
+
+            elif n == "5":
+                line = input("Поиск: ")
+                for elem in lst:
+                    if line.lower() in elem.lower():
+                        print(elem)
+                        break
+                if line not in lst[-1]:
+                    print("Ничего не найдено")
+
+            elif n == "6":
+                print(f"Всего книг: {len(lst)}", lst[0], lst[-1], sep="\n")
+
+            elif n == "0":
+                break
+
+            else:
+                print("Ошибка: некорректный ввод")
+
+class T1711():
+    def task1():
+        welcome()
+        welcome()
+
+    def task2():
+        greet("Анна")
+        greet("Иван")
+        greet("Мария")
+
+    def task3():
+        square(4)
+        square(9)
+
+    def task4():
+        rectangle_area(5, 8)
+        rectangle_area(3, 7)
+
+    def task5():
+        convert_minutes(int(input()))
