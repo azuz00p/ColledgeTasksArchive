@@ -267,7 +267,7 @@ class Hub():
     def H1611(day):
             while True:
                 print("______________________________________________________", f"Выбрана дата: {day}", sep="\n")
-                task = input("Введите номер задания(1-3, 0 для возвращения): ")
+                task = input("Введите номер задания(1, 0 для возвращения): ")
                 if task == "0":
                     print("Возвращение к выбору даты...")
                     break
@@ -293,5 +293,25 @@ class Hub():
                     tasks.T1711.task4()
                 elif task == "5":
                     tasks.T1711.task5()
+                else:
+                    print("Некорректный ввод")
+
+    def H1911(day):
+            while True:
+                print("______________________________________________________", f"Выбрана дата: {day}", sep="\n")
+                task = input("Введите номер задания(1-5, 0 для возвращения): ")
+                if task == "0":
+                    print("Возвращение к выбору даты...")
+                    break
+                elif task == "1":
+                    tasks.T1911.task1()
+                elif task == "2":
+                    tasks.T1911.task2()
+                elif task == "3":
+                    tasks.T1911.task3()
+                elif task == "4":
+                    tasks.T1911.task4()
+                elif task == "5":
+                    tasks.T1911.task5()
                 else:
                     print("Некорректный ввод")
