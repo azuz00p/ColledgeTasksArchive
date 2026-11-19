@@ -1,4 +1,3 @@
-
 from functions import *
 
 # Шаблон для расширения
@@ -260,3 +259,19 @@ class T1711():
 
     def task5():
         convert_minutes(int(input()))
+
+class T1911():
+    def task1():
+        print(double(int(input())))
+
+    def task2():
+        print(average(4, 5, 9))
+
+    def task3():
+        print(is_even(int(input())))
+
+    def task4():
+        print(max_of_two(int(input()), int(input())))
+
+    def task5():
+        to_minutes(int(input()), int(input()))
